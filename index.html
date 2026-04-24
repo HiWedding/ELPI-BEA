@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- Proper mobile rendering -->
+<!-- Mobile optimization -->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 <title>Wedding Invitation</title>
 
-<!-- Fonts (optimized) -->
+<!-- Preload fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Great+Vibes&display=swap" as="style">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
@@ -18,7 +19,7 @@
     box-sizing: border-box;
 }
 
-/* FIX: mobile browser height issue */
+/* Body fix */
 body {
     font-family: 'Playfair Display', serif;
     background: #e4e4db;
@@ -39,9 +40,10 @@ body {
     height: 100%;
     object-fit: cover;
 
-    /* optimized blur */
     filter: blur(4px) brightness(0.75);
     transform: scale(1.05);
+
+    transition: opacity 0.5s ease;
 }
 
 /* Overlay */
@@ -66,8 +68,6 @@ body {
     width: 100%;
     max-width: 420px;
     background: rgba(228,228,219,0.96);
-
-    /* fallback if backdrop not supported */
     backdrop-filter: blur(8px);
 
     border-radius: 18px;
@@ -76,7 +76,6 @@ body {
 
     box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 
-    /* fast animation */
     transform: translateY(30px);
     opacity: 0;
     animation: enter 0.6s ease forwards;
@@ -84,7 +83,7 @@ body {
     cursor: pointer;
 }
 
-/* Smooth entrance */
+/* Entrance */
 @keyframes enter {
     to {
         transform: translateY(0);
@@ -124,7 +123,7 @@ body {
     transform: scale(0.98);
 }
 
-/* Exit */
+/* Exit animation */
 .fade-out {
     animation: exit 0.5s forwards;
 }
@@ -136,7 +135,7 @@ body {
     }
 }
 
-/* Desktop adjustment */
+/* Desktop */
 @media (min-width: 768px) {
     .wrapper {
         align-items: center;
@@ -155,14 +154,22 @@ body {
 
 <body>
 
+<!-- Background -->
 <div class="bg">
-    <img src="c12.jpg" alt="background" loading="eager" decoding="async">
+    <img 
+        src="c12-low.jpg" 
+        data-src="c12.jpg"
+        alt="background"
+        loading="lazy"
+        decoding="async"
+        id="bgImg">
 </div>
 
 <div class="overlay"></div>
 
+<!-- Card -->
 <div class="wrapper">
-    <div class="card" id="card">
+    <div class="card" id="card" tabindex="0">
         <h1>Elpi & Bea</h1>
         <p>We request the honor of your presence</p>
         <button class="btn">OPEN INVITATION</button>
@@ -171,8 +178,25 @@ body {
 
 <script>
 const card = document.getElementById("card");
+const bgImg = document.getElementById("bgImg");
 
-/* instant response (no delay feeling) */
+/* Lazy load high-quality background */
+window.addEventListener("load", () => {
+    const full = bgImg.getAttribute("data-src");
+
+    const temp = new Image();
+    temp.src = full;
+
+    temp.onload = () => {
+        bgImg.style.opacity = "0";
+        setTimeout(() => {
+            bgImg.src = full;
+            bgImg.style.opacity = "1";
+        }, 150);
+    };
+});
+
+/* Click transition */
 card.addEventListener("click", () => {
     card.classList.add("fade-out");
 
@@ -181,7 +205,7 @@ card.addEventListener("click", () => {
     }, 400);
 }, { passive: true });
 
-/* keyboard support */
+/* Keyboard support */
 card.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         card.click();
