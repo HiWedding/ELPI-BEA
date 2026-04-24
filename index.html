@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
+<link rel="preload" as="image" href="c12.jpg">
 <!-- Mobile optimization -->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
@@ -157,12 +157,11 @@ body {
 <!-- Background -->
 <div class="bg">
     <img 
-        src="c12-low.jpg" 
-        data-src="c12.jpg"
-        alt="background"
-        loading="lazy"
-        decoding="async"
-        id="bgImg">
+  src="c12.jpg"
+  alt="background"
+  fetchpriority="high"
+  decoding="async"
+  id="bgImg">
 </div>
 
 <div class="overlay"></div>
@@ -180,21 +179,7 @@ body {
 const card = document.getElementById("card");
 const bgImg = document.getElementById("bgImg");
 
-/* Lazy load high-quality background */
-window.addEventListener("load", () => {
-    const full = bgImg.getAttribute("data-src");
 
-    const temp = new Image();
-    temp.src = full;
-
-    temp.onload = () => {
-        bgImg.style.opacity = "0";
-        setTimeout(() => {
-            bgImg.src = full;
-            bgImg.style.opacity = "1";
-        }, 150);
-    };
-});
 
 /* Click transition */
 card.addEventListener("click", () => {
