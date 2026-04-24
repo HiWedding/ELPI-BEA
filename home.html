@@ -708,6 +708,31 @@ document.querySelectorAll("section").forEach(sec=>{
   observer.observe(sec);
 });
 
+	  window.addEventListener("load", () => {
+
+  const allImages = [
+    ...data.bride,
+    ...data.groom,
+    ...data.couple
+  ];
+
+  // preload in small batches to avoid lag
+  let i = 0;
+
+  function preloadBatch() {
+    for (let j = 0; j < 4 && i < allImages.length; j++, i++) {
+      const img = new Image();
+      img.src = allImages[i];
+    }
+
+    if (i < allImages.length) {
+      setTimeout(preloadBatch, 200); // small delay between batches
+    }
+  }
+
+  preloadBatch();
+});
+
   </script>
 
 </body>
