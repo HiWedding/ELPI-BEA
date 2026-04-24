@@ -157,13 +157,18 @@ body {
 <!-- Background -->
 <div class="bg">
     <img 
-  src="c12.webp"
-  alt="background"
-  fetchpriority="high"
-  decoding="async"
-  id="bgImg">
+      src="c12-medium.webp"
+      srcset="
+        c12-small.webp 600w,
+        c12-medium.webp 1200w,
+        c12-large.webp 1920w
+      "
+      sizes="100vw"
+      alt="background"
+      fetchpriority="high"
+      decoding="async"
+      id="bgImg">
 </div>
-
 <div class="overlay"></div>
 
 <!-- Card -->
