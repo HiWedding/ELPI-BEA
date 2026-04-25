@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="preload" as="image" href="4.webp">
+	<link rel="preload" as="image" href="4-small.webp">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wedding Invitation</title>
@@ -468,7 +468,7 @@ html{
 
   <!-- PETALS -->
   <script>
-    for(let i=0;i<40;i++){
+    for(let i=0;i<15;i++){
       let p=document.createElement("div");
       p.className="petal";
       p.style.left=Math.random()*100+"vw";
@@ -482,13 +482,13 @@ html{
 
   <section class="hero">
 	  <img 
-  src="4.webp"
+  src="4-small.webp"
   srcset="4-small.webp 768w, 4.webp 1920w"
   sizes="100vw"
   class="hero-img"
   fetchpriority="high"
-  loading="eager"
   decoding="async"
+>
 >
 </section>
   </section>
@@ -666,7 +666,7 @@ html{
 
     const header=document.getElementById("scrollHeader");
     const title=document.getElementById("centerTitle");
-    const hero=document.querySelector(".hero-img	");
+    const heroImg=document.querySelector(".hero-img");
 	heroImg.onload = () => {
   heroImg.classList.add("loaded");
 
@@ -762,6 +762,18 @@ document.querySelectorAll("section").forEach(sec=>{
   });
 });
 
+viewBtn.onclick = () => {
+  expand.classList.add("open");
+  load("bride");
+
+  preloadBatch(); // only preload AFTER user clicks
+
+  expand.scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+};
+	  
   </script>
 
 </body>
