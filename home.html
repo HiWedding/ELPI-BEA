@@ -503,64 +503,46 @@ section:not(.hero)::before{
 html{
   scroll-behavior:smooth;
 }
-:root{
-  --floral-img: url("https://wallpapers.com/images/high/green-floral-1200-x-1680-background-izgqwp9rkf53rosx.webp");
-}
 
-/* base section */
 .floral-section{
   position:relative;
   overflow:hidden;
-  background:rgba(255,255,255,0.96);
+  background:#fff;
 }
 
-/* 🌿 PARALLAX LAYERS */
-.floral-layer{
+/* background layer */
+.floral-bg{
   position:absolute;
-  width:600px;
-  height:600px;
-  background-image:var(--floral-img);
+  inset:-30%;
+  background-image:url("https://wallpapers.com/images/high/green-floral-1200-x-1680-background-izgqwp9rkf53rosx.webp");
   background-size:cover;
   background-position:center;
   opacity:0.18;
-  pointer-events:none;
-  filter:blur(1px) saturate(1.2);
-  transform:translate3d(0,0,0);
-  will-change:transform;
+  filter:blur(2px) saturate(1.2);
+  transform:translateY(0px) scale(1.1);
   z-index:0;
+  pointer-events:none;
+  will-change:transform;
 }
 
-/* top-left */
-.floral-1{
-  top:-120px;
-  left:-160px;
-  transform:rotate(-15deg);
+/* soft dark gradient for readability */
+.floral-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.85),
+    rgba(255,255,255,0.95)
+  );
+  z-index:1;
 }
 
-/* bottom-right */
-.floral-2{
-  bottom:-140px;
-  right:-180px;
-  transform:rotate(20deg) scaleX(-1);
-  opacity:0.14;
-}
-
-/* center glow (soft luxury depth) */
-.floral-3{
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:800px;
-  height:800px;
-  opacity:0.08;
-  filter:blur(2px);
-}
-
-/* keep text above */
-.floral-section > *{
+/* content stays above */
+.floral-content{
   position:relative;
   z-index:2;
-}
+}	  
+  
   </style>
 </head>
 
@@ -594,7 +576,10 @@ html{
   </section>
 
 <!-- FAQ -->
-<section class="faq-section floral-section reveal">	
+<section class="faq-section floral-section reveal">
+  <div class="floral-bg"></div>
+  <div class="floral-overlay"></div>
+  <div class="floral-content">	
   <div class="faq-title">FREQUENTLY ASKED QUESTIONS</div>
 
   <div class="faq-container">
@@ -641,6 +626,7 @@ html{
 
   </div>
 </section>
+	 
 
   <section class="countdown-section">
     <div class="invite-title">INVITE YOU TO CELEBRATE THEIR WEDDING</div>
@@ -650,7 +636,7 @@ html{
 
 	
 <section class="invite-details floral-section reveal">
-	<div class="floral-layer floral-1"></div>
+	
 
 
   <div class="script-title">The Entourage</div>
@@ -660,17 +646,17 @@ html{
       <div class="section-title">PARENTS OF THE GROOM</div>
       <p>Mr. Elpidio Rellora, Sr.<br>Mrs. Mary Jane Rellora</p>
     </div>
-<div class="floral-layer floral-2">
+
     <div>
       <div class="section-title">PARENTS OF THE BRIDE</div>
       <p>Mr. Danilo Lagazon<br>Mrs. Marites Lagazon</p>
     </div>
-  </div>
+  
 	  </div>
-<div class="floral-layer floral-3">
+
   <div class="script-title">Principal Sponsors</div>
   <div class="sub-text">To stand as witness to our vows</div>
-</div>
+
   <div class="list">
     <p>Engr. Susan Agron</p>
     <p>Mrs. Angelita Begaso</p>
