@@ -128,21 +128,12 @@
       background:rgba(0,0,0,0.35);
     }
 
-section {
-  padding: 140px 24px;
-  position: relative;
-}
-
-/* soft luxury spacing rhythm */
-section + section {
-  margin-top: 10px;
-}
-
-/* center container feel */
-section > * {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+    section{
+      padding:120px 20px;
+    }
+section{
+  padding:120px 20px;
+  position:relative;
 }
 
 section:not(.hero)::before{
@@ -193,83 +184,41 @@ section:not(.hero)::before{
 
 	  .invite-details{
   text-align:center;
-  padding:140px 25px;
+  padding:100px 20px;
   background:#fff;
 }
 
-	  .invite-details,
-.faq-section,
-.rsvp-card {
-  background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
-  position: relative;
-  overflow: hidden;
-  border-top: 1px solid rgba(44, 94, 26, 0.08);
-  border-bottom: 1px solid rgba(44, 94, 26, 0.08);
-  transition: all 0.6s ease;
+	  .script-title{
+  font-family:'Great Vibes',cursive;
+  font-size:48px;
+  color:#2c5e1a;
+  margin-bottom:20px;
 }
 
-	  .invite-details:hover,
-.faq-section:hover,
-.rsvp-card:hover {
-  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.06);
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  letter-spacing:3px;
+  margin-top:40px;
+  margin-bottom:10px;
 }
 
-/* subtle paper texture */
-.invite-details::before,
-.faq-section::before,
-.rsvp-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
+.sub-text{
+  font-size:14px;
+  color:#777;
+  margin-bottom:25px;
 }
 
-	  .script-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 54px;
-  color: #2c5e1a;
-  margin-bottom: 18px;
-  letter-spacing: 0.5px;
-}
-
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 13px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #2c5e1a;
-  opacity: 0.75;
-  margin-top: 50px;
-  margin-bottom: 14px;
-}
-
-.sub-text {
-  font-size: 15px;
-  color: #666;
-  line-height: 1.9;
-}
-.script-title::after,
-.faq-title::after {
-  content: "";
-  display: block;
-  width: 90px;
-  height: 1px;
-  margin: 20px auto 0;
-  background: linear-gradient(to right, transparent, #2c5e1a, transparent);
-  opacity: 0.4;
-}
-	  
 .two-col{
   display:flex;
   justify-content:center;
-  gap:100px;
+  gap:60px;
   flex-wrap:wrap;
-  margin-bottom:40px;
+  margin-bottom:30px;
 }
 
 .two-col div{
-  max-width:340px;
+  max-width:300px;
 }
 
 .list p{
@@ -456,7 +405,7 @@ section:not(.hero)::before{
       display:flex;
       flex-direction:column;
       align-items:center;
-      padding-bottom:140px;
+      padding-bottom:80px;
       animation:fadeUp 1s ease both;
     }
 
@@ -467,18 +416,13 @@ section:not(.hero)::before{
     }
 
     .rsvp-button{
-       background: linear-gradient(135deg, #1f3f14, #2c5e1a);
-  padding: 18px 85px;
-  border-radius: 50px;
-  font-size: 20px;
-  letter-spacing: 4px;
-  box-shadow: 0 25px 60px rgba(44, 94, 26, 0.25);
-  transition: all 0.4s ease;
-}
-
-	   transform: translateY(-4px);
-  box-shadow: 0 35px 80px rgba(44, 94, 26, 0.35);
-}
+      background:#0a2f0f;
+      color:#fff;
+      padding:18px 75px;
+      font-size:22px;
+      letter-spacing:5px;
+      font-family:'Playfair Display',serif;
+    }
 
     .rsvp-note{
       max-width:700px;
