@@ -182,79 +182,25 @@ section:not(.hero)::before{
       to{opacity:1;transform:translateY(0);}
     }
 
-	  .invite-details,
-.rsvp-card,
-.faq-section {
-  background: linear-gradient(180deg, #ffffff 0%, #faf7f3 100%);
-  position: relative;
+	  .invite-details{
+  text-align:center;
+  padding:100px 20px;
+  background:#fff;
 }
 
-/* soft luxury paper texture */
-.invite-details::before,
-.rsvp-card::before,
-.faq-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  opacity: 0.4;
+	  .script-title{
+  font-family:'Great Vibes',cursive;
+  font-size:48px;
+  color:#2c5e1a;
+  margin-bottom:20px;
 }
 
-/* elegant inner spacing frame */
-.invite-details,
-.rsvp-card,
-.faq-section {
-  border-top: 1px solid rgba(44, 94, 26, 0.08);
-  border-bottom: 1px solid rgba(44, 94, 26, 0.08);
-}
-
-	  
-	.invite-details .script-title,
-.faq-title {
-  position: relative;
-}
-
-.invite-details .script-title::after,
-.faq-title::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 1px;
-  background: #2c5e1a;
-  margin: 18px auto 0;
-  opacity: 0.4;
-}
-
-.two-col {
-  gap: 80px;
-  margin-top: 30px;
-}
-
-.invite-details p,
-.faq-answer,
-.sub-text {
-  line-height: 1.9;
-  font-size: 14.5px;
-  color: #555;
-}
-
-	  .invite-details:hover,
-.rsvp-card:hover,
-.faq-section:hover {
-  transition: 0.6s ease;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.06);
-}
-
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 14px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #2c5e1a;
-  opacity: 0.85;
-  margin-top: 50px;
-  margin-bottom: 15px;
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  letter-spacing:3px;
+  margin-top:40px;
+  margin-bottom:10px;
 }
 
 .sub-text{
