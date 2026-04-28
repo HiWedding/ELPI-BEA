@@ -128,12 +128,21 @@
       background:rgba(0,0,0,0.35);
     }
 
-    section{
-      padding:120px 20px;
-    }
-section{
-  padding:120px 20px;
-  position:relative;
+section {
+  padding: 140px 24px;
+  position: relative;
+}
+
+/* soft luxury spacing rhythm */
+section + section {
+  margin-top: 10px;
+}
+
+/* center container feel */
+section > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section:not(.hero)::before{
@@ -184,41 +193,76 @@ section:not(.hero)::before{
 
 	  .invite-details{
   text-align:center;
-  padding:100px 20px;
+  padding:140px 25px;
   background:#fff;
 }
 
-	  .script-title{
-  font-family:'Great Vibes',cursive;
-  font-size:48px;
-  color:#2c5e1a;
-  margin-bottom:20px;
+	  .invite-details,
+.faq-section,
+.rsvp-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(44, 94, 26, 0.08);
+  border-bottom: 1px solid rgba(44, 94, 26, 0.08);
 }
 
-.section-title{
-  font-family:'Playfair Display',serif;
-  font-size:20px;
-  letter-spacing:3px;
-  margin-top:40px;
-  margin-bottom:10px;
+/* subtle paper texture */
+.invite-details::before,
+.faq-section::before,
+.rsvp-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
 }
 
-.sub-text{
-  font-size:14px;
-  color:#777;
-  margin-bottom:25px;
+	  .script-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 54px;
+  color: #2c5e1a;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
 }
 
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #2c5e1a;
+  opacity: 0.75;
+  margin-top: 50px;
+  margin-bottom: 14px;
+}
+
+.sub-text {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.9;
+}
+.script-title::after,
+.faq-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 1px;
+  margin: 20px auto 0;
+  background: linear-gradient(to right, transparent, #2c5e1a, transparent);
+  opacity: 0.4;
+}
+	  
 .two-col{
   display:flex;
   justify-content:center;
-  gap:60px;
+  gap:100px;
   flex-wrap:wrap;
-  margin-bottom:30px;
+  margin-bottom:40px;
 }
 
 .two-col div{
-  max-width:300px;
+  max-width:340px;
 }
 
 .list p{
