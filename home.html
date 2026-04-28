@@ -503,46 +503,55 @@ section:not(.hero)::before{
 html{
   scroll-behavior:smooth;
 }
-
 .floral-section{
   position:relative;
   overflow:hidden;
   background:#fff;
 }
 
-/* background layer */
-.floral-bg{
+/* TOP LEFT FLORAL */
+.floral-section::before{
+  content:"";
   position:absolute;
-  inset:-30%;
-  background-image:url("https://wallpapers.com/images/high/green-floral-1200-x-1680-background-izgqwp9rkf53rosx.webp");
-  background-size:cover;
-  background-position:center;
-  opacity:0.18;
-  filter:blur(2px) saturate(1.2);
-  transform:translateY(0px) scale(1.1);
-  z-index:0;
-  pointer-events:none;
-  will-change:transform;
+  top:-40px;
+  left:-40px;
+  width:260px;
+  height:260px;
+
+  background:
+    radial-gradient(circle at 30% 30%, rgba(210,140,140,0.6), transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(170,100,100,0.45), transparent 65%),
+    radial-gradient(circle at 50% 50%, rgba(140,80,80,0.25), transparent 70%);
+
+  border-radius:50%;
+  filter:blur(6px);
+  opacity:0.9;
 }
 
-/* soft dark gradient for readability */
-.floral-overlay{
+/* BOTTOM RIGHT FLORAL */
+.floral-section::after{
+  content:"";
   position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.85),
-    rgba(255,255,255,0.95)
-  );
+  bottom:-40px;
+  right:-40px;
+  width:260px;
+  height:260px;
+
+  background:
+    radial-gradient(circle at 30% 30%, rgba(210,140,140,0.6), transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(170,100,100,0.45), transparent 65%),
+    radial-gradient(circle at 50% 50%, rgba(140,80,80,0.25), transparent 70%);
+
+  border-radius:50%;
+  filter:blur(6px);
+  opacity:0.9;
+}
+
+/* Keep content above */
+.floral-section > *{
+  position:relative;
   z-index:1;
 }
-
-/* content stays above */
-.floral-content{
-  position:relative;
-  z-index:2;
-}	  
-  
   </style>
 </head>
 
@@ -576,10 +585,7 @@ html{
   </section>
 
 <!-- FAQ -->
-<section class="faq-section floral-section reveal">
-  <div class="floral-bg"></div>
-  <div class="floral-overlay"></div>
-  <div class="floral-content">	
+<section class="faq-section floral-section reveal">	
   <div class="faq-title">FREQUENTLY ASKED QUESTIONS</div>
 
   <div class="faq-container">
@@ -626,8 +632,6 @@ html{
 
   </div>
 </section>
-	  </div>
-</section>
 
   <section class="countdown-section">
     <div class="invite-title">INVITE YOU TO CELEBRATE THEIR WEDDING</div>
@@ -637,9 +641,6 @@ html{
 
 	
 <section class="invite-details floral-section reveal">
-	
-
-
   <div class="script-title">The Entourage</div>
 
   <div class="two-col">
@@ -652,8 +653,7 @@ html{
       <div class="section-title">PARENTS OF THE BRIDE</div>
       <p>Mr. Danilo Lagazon<br>Mrs. Marites Lagazon</p>
     </div>
-  
-	  </div>
+  </div>
 
   <div class="script-title">Principal Sponsors</div>
   <div class="sub-text">To stand as witness to our vows</div>
@@ -683,7 +683,7 @@ html{
 </section>
 
 
-<section class="invite-details floral-section reveal">
+<section class="invite-details reveal">
   <div class="script-title">Secondary Sponsors</div>
   <div class="sub-text">To assist us in our needs</div>
 
