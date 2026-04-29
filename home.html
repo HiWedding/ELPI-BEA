@@ -154,7 +154,7 @@
 	  .section-bg{
   position:relative;
   background:url("hihi.webp") center/cover no-repeat;
-  background-attachment:fixed;
+  background-attachment:scroll;
 }
 
 /* overlay for readability */
@@ -162,8 +162,9 @@
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(255,249,244,0.88);
-  backdrop-filter:blur(4px);
+  background:rgba(255,249,244,0.65); /* ✅ reduced */
+  backdrop-filter:blur(3px);
+
 }
 
 .section-bg > *{
@@ -265,7 +266,7 @@ section:not(.hero)::before{
 	  .invite-details{
   text-align:center;
   padding:100px 20px;
-  background:#fff;
+  
 }
 
 	  .invite-details:nth-of-type(2){
