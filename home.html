@@ -640,7 +640,63 @@ html{
   </section>
 
 	
-<section class="invite-details floral-section reveal">
+
+
+  <!-- GALLERY -->
+  <section>
+    <div class="gallery-wrapper">
+      <div>
+        <div class="gallery-box">
+          <img src="1.webp">
+        </div>
+        <div style="text-align:center;">
+          <button class="view-btn" id="viewBtn">VIEW GALLERY</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="invite-sub">You Are Invited</div>
+        <p style="margin-top:25px;line-height:1.9;">
+          We are excited to share this beautiful journey with you.
+        </p>
+        <p style="margin-top:18px;line-height:1.9;">
+          Every moment becomes more meaningful with your presence.
+        </p>
+      </div>
+    </div>
+
+    <!-- HIDDEN GALLERY -->
+    <div class="gallery-expand" id="expandBox">
+      <div class="mode-switch">
+        <button class="mode-btn active" onclick="switchTab('bride', this)">Bride</button>
+<button class="mode-btn" onclick="switchTab('couple', this)">Couple</button>
+<button class="mode-btn" onclick="switchTab('groom', this)">Groom</button>
+      </div>
+
+      <div class="insta-grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp-card floral-section reveal">
+    <img src="ring.png">
+    <div class="rsvp-button">RSVP HERE</div>
+    <div class="rsvp-note">
+      This celebration is strictly by invitation only.<br><br>
+      Kindly respond on or before May 19, 2026 so we may properly prepare for your presence on June 19, 2026.<br><br>
+      Your prompt confirmation will be deeply appreciated as we look forward to celebrating this meaningful occasion.
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="close" onclick="closeLB()">×</div>
+    <div class="nav prev" onclick="change(-1)">‹</div>
+    <img id="lightboxImg">
+    <div class="nav next" onclick="change(1)">›</div>
+  </div>
+
+	<section class="invite-details floral-section reveal">
   <div class="script-title">The Entourage</div>
 
   <div class="two-col">
@@ -790,60 +846,6 @@ html{
   </div>
 
 </section>
-
-  <!-- GALLERY -->
-  <section>
-    <div class="gallery-wrapper">
-      <div>
-        <div class="gallery-box">
-          <img src="1.webp">
-        </div>
-        <div style="text-align:center;">
-          <button class="view-btn" id="viewBtn">VIEW GALLERY</button>
-        </div>
-      </div>
-
-      <div>
-        <div class="invite-sub">You Are Invited</div>
-        <p style="margin-top:25px;line-height:1.9;">
-          We are excited to share this beautiful journey with you.
-        </p>
-        <p style="margin-top:18px;line-height:1.9;">
-          Every moment becomes more meaningful with your presence.
-        </p>
-      </div>
-    </div>
-
-    <!-- HIDDEN GALLERY -->
-    <div class="gallery-expand" id="expandBox">
-      <div class="mode-switch">
-        <button class="mode-btn active" onclick="switchTab('bride', this)">Bride</button>
-<button class="mode-btn" onclick="switchTab('couple', this)">Couple</button>
-<button class="mode-btn" onclick="switchTab('groom', this)">Groom</button>
-      </div>
-
-      <div class="insta-grid" id="grid"></div>
-    </div>
-  </section>
-
-  <!-- RSVP -->
-  <section class="rsvp-card floral-section reveal">
-    <img src="ring.png">
-    <div class="rsvp-button">RSVP HERE</div>
-    <div class="rsvp-note">
-      This celebration is strictly by invitation only.<br><br>
-      Kindly respond on or before May 19, 2026 so we may properly prepare for your presence on June 19, 2026.<br><br>
-      Your prompt confirmation will be deeply appreciated as we look forward to celebrating this meaningful occasion.
-    </div>
-  </section>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <div class="close" onclick="closeLB()">×</div>
-    <div class="nav prev" onclick="change(-1)">‹</div>
-    <img id="lightboxImg">
-    <div class="nav next" onclick="change(1)">›</div>
-  </div>
 
   <script>
     const viewBtn=document.getElementById("viewBtn");
