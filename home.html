@@ -10,8 +10,11 @@
 
   <style>
     :root{
-      --green:#2c5e1a;
-    }
+  --green:#2c5e1a;
+  --brown:#6b4f3b;
+  --cream:#FFF9F4;
+  --soft:#f5efe8;
+}
 
     {
       margin:0;
@@ -152,7 +155,9 @@ section:not(.hero)::before{
     /* COUNTDOWN */
     .countdown-section{
       text-align:center;
-    }
+	background:var(--cream);
+}
+    
 
     .invite-title{
       font-family:'Playfair Display',serif;
@@ -188,11 +193,25 @@ section:not(.hero)::before{
   background:#fff;
 }
 
+	  .invite-details:nth-of-type(2){
+  background:var(--soft);
+}
+
+	  .invite-details:last-of-type{
+  background:#fff;
+}
+
 	  .script-title{
   font-family:'Great Vibes',cursive;
   font-size:48px;
-  color:#2c5e1a;
+
   margin-bottom:20px;
+}
+
+	  .script-title,
+.faq-title,
+.invite-title{
+  color:var(--brown);
 }
 
 .section-title{
@@ -201,6 +220,9 @@ section:not(.hero)::before{
   letter-spacing:3px;
   margin-top:40px;
   margin-bottom:10px;
+  color:#444;
+  font-weight:600;
+  letter-spacing:2px;
 }
 
 .sub-text{
@@ -223,6 +245,13 @@ section:not(.hero)::before{
 
 .list p{
   margin:6px 0;
+}
+
+	  .list p,
+.two-col p,
+.invite-details p{
+  color:var(--green);
+  font-weight:500;
 }
 
     /* GALLERY */
@@ -434,7 +463,7 @@ section:not(.hero)::before{
 
 /* FAQ */
 .faq-section{
-  background:#fff;
+  background:var(--soft);
   text-align:center;
   animation:fadeUp 1s ease both;
 }
@@ -460,6 +489,7 @@ section:not(.hero)::before{
 }
 
 .faq-question{
+  color:var(--brown);
   font-weight:500;
   font-size:18px;
   display:flex;
@@ -475,6 +505,7 @@ section:not(.hero)::before{
   color:#555;
   line-height:1.7;
   margin-top:10px;
+	
 }
 
 .faq-item.active .faq-answer{
