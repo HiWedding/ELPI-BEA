@@ -10,78 +10,20 @@
 
   <style>
     :root{
-  --green:#2c5e1a;
-  --brown:#6b4f3b;
-  --cream:#FFF9F4;
-  --soft:#f5efe8;
---gold:#d4af37;
-}
+      --green:#2c5e1a;
+    }
 
-	  .view-btn:hover,
-.mode-btn:hover,
-.rsvp-button:hover,
-.faq-item:hover{
-  box-shadow:0 0 12px rgba(212,175,55,0.6),
-             0 0 25px rgba(212,175,55,0.35);
-  border-color:var(--gold);
-}
-
-	  .list p,
-.two-col p{
-  opacity:0;
-  transform:translateY(20px);
-  transition:all .6s ease;
-}
-
-/* when section is visible */
-.reveal.show .list p,
-.reveal.show .two-col p{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* delay per item */
-.list p:nth-child(1){transition-delay:.1s;}
-.list p:nth-child(2){transition-delay:.2s;}
-.list p:nth-child(3){transition-delay:.3s;}
-.list p:nth-child(4){transition-delay:.4s;}
-.list p:nth-child(5){transition-delay:.5s;}
-.list p:nth-child(6){transition-delay:.6s;}
-.list p:nth-child(7){transition-delay:.7s;}
-.list p:nth-child(8){transition-delay:.8s;}
-.list p:nth-child(9){transition-delay:.9s;}
-.list p:nth-child(10){transition-delay:1s;}
-
-	  .floral-section::before,
-.floral-section::after{
-  opacity:0;
-  transform:scale(0.8);
-  transition:all 1.2s ease;
-}
-
-.floral-section.show::before,
-.floral-section.show::after{
-  opacity:0.9;
-  transform:scale(1);
-}
-	  .script-title:hover,
-.faq-title:hover{
-  text-shadow:0 0 10px rgba(212,175,55,0.6);
-}
-
-    *{
+    {
       margin:0;
       padding:0;
       box-sizing:border-box;
     }
 
     body{
-  font-family:'Poppins',sans-serif;
-  background:
-    linear-gradient(rgba(255,249,244,0.92), rgba(255,249,244,0.92)),
-    url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-  overflow-x:hidden;
-}
+      font-family:'Poppins',sans-serif;
+      background:#FFF9F4;
+      overflow-x:hidden;
+    }
 
     /* 🌸 PETALS */
     .petal{
@@ -151,29 +93,6 @@
       transform:translateY(0);
     }
 
-	  .section-bg{
-  position:relative;
-  background:url("hihi.webp") center/cover no-repeat;
- 
-}
-
-/* overlay for readability */
-.section-bg::before{
-  content:"";
-  position:absolute;
-  inset:0;
- background:linear-gradient(
-    rgba(255,249,244,0.45),
-    rgba(255,249,244,0.7)
-  );
-  backdrop-filter:blur(2px);
-}
-
-.section-bg > *{
-  position:relative;
-  z-index:1;
-}
-
     /* HERO */
     .hero{
   background:#d6d2c4;
@@ -209,7 +128,9 @@
       background:rgba(0,0,0,0.35);
     }
 
-  
+    section{
+      padding:120px 20px;
+    }
 section{
   padding:120px 20px;
   position:relative;
@@ -231,9 +152,7 @@ section:not(.hero)::before{
     /* COUNTDOWN */
     .countdown-section{
       text-align:center;
-	background:var(--cream);
-}
-    
+    }
 
     .invite-title{
       font-family:'Playfair Display',serif;
@@ -265,22 +184,15 @@ section:not(.hero)::before{
 
 	  .invite-details{
   text-align:center;
-   background:transparent;
-  
+  padding:100px 20px;
+  background:#fff;
 }
 
-	  
 	  .script-title{
   font-family:'Great Vibes',cursive;
   font-size:48px;
-
+  color:#2c5e1a;
   margin-bottom:20px;
-}
-
-	  .script-title,
-.faq-title,
-.invite-title{
-  color:var(--brown);
 }
 
 .section-title{
@@ -289,9 +201,6 @@ section:not(.hero)::before{
   letter-spacing:3px;
   margin-top:40px;
   margin-bottom:10px;
-  color:#444;
-  font-weight:600;
-  letter-spacing:2px;
 }
 
 .sub-text{
@@ -314,13 +223,6 @@ section:not(.hero)::before{
 
 .list p{
   margin:6px 0;
-}
-
-	  .list p,
-.two-col p,
-.invite-details p{
-  color:var(--green);
-  font-weight:500;
 }
 
     /* GALLERY */
@@ -532,7 +434,7 @@ section:not(.hero)::before{
 
 /* FAQ */
 .faq-section{
-  background:var(--soft);
+  background:#fff;
   text-align:center;
   animation:fadeUp 1s ease both;
 }
@@ -558,7 +460,6 @@ section:not(.hero)::before{
 }
 
 .faq-question{
-  color:var(--brown);
   font-weight:500;
   font-size:18px;
   display:flex;
@@ -574,7 +475,6 @@ section:not(.hero)::before{
   color:#555;
   line-height:1.7;
   margin-top:10px;
-	
 }
 
 .faq-item.active .faq-answer{
@@ -682,7 +582,7 @@ html{
 >
 >
 </section>
-
+  </section>
 
 <!-- FAQ -->
 <section class="faq-section floral-section reveal">	
@@ -740,63 +640,7 @@ html{
   </section>
 
 	
-
-
-  <!-- GALLERY -->
-  <section>
-    <div class="gallery-wrapper">
-      <div>
-        <div class="gallery-box">
-          <img src="1.webp">
-        </div>
-        <div style="text-align:center;">
-          <button class="view-btn" id="viewBtn">VIEW GALLERY</button>
-        </div>
-      </div>
-
-      <div>
-        <div class="invite-sub">You Are Invited</div>
-        <p style="margin-top:25px;line-height:1.9;">
-          We are excited to share this beautiful journey with you.
-        </p>
-        <p style="margin-top:18px;line-height:1.9;">
-          Every moment becomes more meaningful with your presence.
-        </p>
-      </div>
-    </div>
-
-    <!-- HIDDEN GALLERY -->
-    <div class="gallery-expand" id="expandBox">
-      <div class="mode-switch">
-        <button class="mode-btn active" onclick="switchTab('bride', this)">Bride</button>
-<button class="mode-btn" onclick="switchTab('couple', this)">Couple</button>
-<button class="mode-btn" onclick="switchTab('groom', this)">Groom</button>
-      </div>
-
-      <div class="insta-grid" id="grid"></div>
-    </div>
-  </section>
-
-  <!-- RSVP -->
-  <section class="rsvp-card floral-section reveal">
-    <img src="ring.png">
-    <div class="rsvp-button">RSVP HERE</div>
-    <div class="rsvp-note">
-      This celebration is strictly by invitation only.<br><br>
-      Kindly respond on or before May 19, 2026 so we may properly prepare for your presence on June 19, 2026.<br><br>
-      Your prompt confirmation will be deeply appreciated as we look forward to celebrating this meaningful occasion.
-    </div>
-  </section>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <div class="close" onclick="closeLB()">×</div>
-    <div class="nav prev" onclick="change(-1)">‹</div>
-    <img id="lightboxImg">
-    <div class="nav next" onclick="change(1)">›</div>
-  </div>
-
-<section class="invite-details floral-section reveal section-bg">
+<section class="invite-details floral-section reveal">
   <div class="script-title">The Entourage</div>
 
   <div class="two-col">
@@ -946,7 +790,61 @@ html{
   </div>
 
 </section>
-	
+
+  <!-- GALLERY -->
+  <section>
+    <div class="gallery-wrapper">
+      <div>
+        <div class="gallery-box">
+          <img src="1.webp">
+        </div>
+        <div style="text-align:center;">
+          <button class="view-btn" id="viewBtn">VIEW GALLERY</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="invite-sub">You Are Invited</div>
+        <p style="margin-top:25px;line-height:1.9;">
+          We are excited to share this beautiful journey with you.
+        </p>
+        <p style="margin-top:18px;line-height:1.9;">
+          Every moment becomes more meaningful with your presence.
+        </p>
+      </div>
+    </div>
+
+    <!-- HIDDEN GALLERY -->
+    <div class="gallery-expand" id="expandBox">
+      <div class="mode-switch">
+        <button class="mode-btn active" onclick="switchTab('bride', this)">Bride</button>
+<button class="mode-btn" onclick="switchTab('couple', this)">Couple</button>
+<button class="mode-btn" onclick="switchTab('groom', this)">Groom</button>
+      </div>
+
+      <div class="insta-grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp-card floral-section reveal">
+    <img src="ring.png">
+    <div class="rsvp-button">RSVP HERE</div>
+    <div class="rsvp-note">
+      This celebration is strictly by invitation only.<br><br>
+      Kindly respond on or before May 19, 2026 so we may properly prepare for your presence on June 19, 2026.<br><br>
+      Your prompt confirmation will be deeply appreciated as we look forward to celebrating this meaningful occasion.
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="close" onclick="closeLB()">×</div>
+    <div class="nav prev" onclick="change(-1)">‹</div>
+    <img id="lightboxImg">
+    <div class="nav next" onclick="change(1)">›</div>
+  </div>
+
   <script>
     const viewBtn=document.getElementById("viewBtn");
     const expand=document.getElementById("expandBox");
@@ -1011,12 +909,12 @@ html{
 
     const header=document.getElementById("scrollHeader");
     const title=document.getElementById("centerTitle");
-    const hero=document.querySelector(".hero");
-	hero.onload = () => {
-  hero.classList.add("loaded");
+    const heroImg=document.querySelector(".hero-img");
+	heroImg.onload = () => {
+  heroImg.classList.add("loaded");
 
   // start zoom AFTER load
-  hero.style.animation = "slowZoom 10s ease-in-out infinite alternate";
+  heroImg.style.animation = "slowZoom 10s ease-in-out infinite alternate";
 };
     window.addEventListener("scroll",()=>{
       let y=window.scrollY;
@@ -1090,9 +988,35 @@ document.querySelectorAll("section").forEach(sec=>{
     }
   }
 
-	
+		  window.addEventListener("DOMContentLoaded", () => {
+  data.bride.slice(0,4).forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+});
 
- 
+  preloadBatch();
+});
+
+	  window.addEventListener("DOMContentLoaded", () => {
+  data.bride.slice(0,4).forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+});
+
+viewBtn.onclick = () => {
+  expand.classList.add("open");
+  load("bride");
+
+  preloadBatch(); // only preload AFTER user clicks
+
+  expand.scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+};
+	  
   </script>
 
 </body>
