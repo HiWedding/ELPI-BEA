@@ -1011,19 +1011,19 @@ html{
 
     const header=document.getElementById("scrollHeader");
     const title=document.getElementById("centerTitle");
-    const heroImg=document.querySelector(".heroImg");
-	heroImg.onload = () => {
-  heroImg.classList.add("loaded");
+    const hero=document.querySelector(".hero");
+	hero.onload = () => {
+  hero.classList.add("loaded");
 
   // start zoom AFTER load
-  heroImg.style.animation = "slowZoom 10s ease-in-out infinite alternate";
+  hero.style.animation = "slowZoom 10s ease-in-out infinite alternate";
 };
     window.addEventListener("scroll",()=>{
       let y=window.scrollY;
       if(y>10) title.classList.add("hide");
       else title.classList.remove("hide");
 
-      if(y>heroImg.offsetHeight-80) header.classList.add("show");
+      if(y>hero.offsetHeight-80) header.classList.add("show");
       else header.classList.remove("show");
     });
 
