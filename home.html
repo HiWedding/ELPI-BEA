@@ -1011,7 +1011,7 @@ html{
 
     const header=document.getElementById("scrollHeader");
     const title=document.getElementById("centerTitle");
-    const heroImg=document.querySelector(".hero");
+    const heroImg=document.querySelector(".heroImg");
 	heroImg.onload = () => {
   heroImg.classList.add("loaded");
 
@@ -1023,7 +1023,7 @@ html{
       if(y>10) title.classList.add("hide");
       else title.classList.remove("hide");
 
-      if(y>hero.offsetHeight-80) header.classList.add("show");
+      if(y>heroImg.offsetHeight-80) header.classList.add("show");
       else header.classList.remove("show");
     });
 
