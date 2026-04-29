@@ -14,6 +14,59 @@
   --brown:#6b4f3b;
   --cream:#FFF9F4;
   --soft:#f5efe8;
+--gold:#d4af37;
+}
+
+	  .view-btn:hover,
+.mode-btn:hover,
+.rsvp-button:hover,
+.faq-item:hover{
+  box-shadow:0 0 12px rgba(212,175,55,0.6),
+             0 0 25px rgba(212,175,55,0.35);
+  border-color:var(--gold);
+}
+
+	  .list p,
+.two-col p{
+  opacity:0;
+  transform:translateY(20px);
+  transition:all .6s ease;
+}
+
+/* when section is visible */
+.reveal.show .list p,
+.reveal.show .two-col p{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* delay per item */
+.list p:nth-child(1){transition-delay:.1s;}
+.list p:nth-child(2){transition-delay:.2s;}
+.list p:nth-child(3){transition-delay:.3s;}
+.list p:nth-child(4){transition-delay:.4s;}
+.list p:nth-child(5){transition-delay:.5s;}
+.list p:nth-child(6){transition-delay:.6s;}
+.list p:nth-child(7){transition-delay:.7s;}
+.list p:nth-child(8){transition-delay:.8s;}
+.list p:nth-child(9){transition-delay:.9s;}
+.list p:nth-child(10){transition-delay:1s;}
+
+	  .floral-section::before,
+.floral-section::after{
+  opacity:0;
+  transform:scale(0.8);
+  transition:all 1.2s ease;
+}
+
+.floral-section.show::before,
+.floral-section.show::after{
+  opacity:0.9;
+  transform:scale(1);
+}
+	  .script-title:hover,
+.faq-title:hover{
+  text-shadow:0 0 10px rgba(212,175,55,0.6);
 }
 
     {
@@ -23,10 +76,12 @@
     }
 
     body{
-      font-family:'Poppins',sans-serif;
-      background:#FFF9F4;
-      overflow-x:hidden;
-    }
+  font-family:'Poppins',sans-serif;
+  background:
+    linear-gradient(rgba(255,249,244,0.92), rgba(255,249,244,0.92)),
+    url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  overflow-x:hidden;
+}
 
     /* 🌸 PETALS */
     .petal{
@@ -95,6 +150,26 @@
     .scroll-header.show{
       transform:translateY(0);
     }
+
+	  .section-bg{
+  position:relative;
+  background:url("hihi.webp") center/cover no-repeat;
+  background-attachment:fixed;
+}
+
+/* overlay for readability */
+.section-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,249,244,0.88);
+  backdrop-filter:blur(4px);
+}
+
+.section-bg > *{
+  position:relative;
+  z-index:1;
+}
 
     /* HERO */
     .hero{
@@ -671,7 +746,7 @@ html{
   </section>
 
 	
-<section class="invite-details floral-section reveal">
+<section class="invite-details floral-section reveal section-bg">
   <div class="script-title">The Entourage</div>
 
   <div class="two-col">
