@@ -809,6 +809,102 @@ a:hover{
 .deets-frame:hover img{
   transform:scale(1.02); /* subtle only */
 }
+
+.dress-code-section{
+  padding:120px 20px;
+  display:flex;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(180,210,190,0.25), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(200,230,220,0.25), transparent 60%),
+    #f9f9f7;
+}
+
+.dress-container{
+  max-width:800px;
+  width:100%;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(8px);
+  border-radius:25px;
+  padding:60px 40px;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+}
+
+/* Script Title */
+.script{
+  font-family:'Great Vibes',cursive;
+  font-size:50px;
+  color:#2c5e1a;
+  margin-bottom:10px;
+}
+
+/* Titles */
+.dress-top h3,
+.dress-bottom h3{
+  font-family:'Playfair Display',serif;
+  letter-spacing:3px;
+  font-size:22px;
+  color:#2c5e1a;
+}
+
+.subtitle{
+  font-size:16px;
+  margin-top:5px;
+  color:#555;
+}
+
+/* Palette */
+.palette{
+  margin-top:25px;
+}
+
+.palette p{
+  font-size:12px;
+  letter-spacing:2px;
+  color:#666;
+}
+
+.palette span{
+  font-size:11px;
+  display:block;
+  margin-top:3px;
+}
+
+.colors{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-top:15px;
+}
+
+.colors span{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+}
+
+/* Your exact tones */
+.c1{ background:#7d8a6f; }  /* sage */
+.c2{ background:#e4c9c1; }  /* blush */
+.c3{ background:#c49a86; }  /* nude */
+.c4{ background:#b5838d; }  /* mauve */
+
+/* Divider */
+.divider{
+  width:60px;
+  height:2px;
+  background:#2c5e1a;
+  opacity:0.3;
+  margin:40px auto;
+}
+
+/* Bottom */
+.dress-bottom p{
+  margin-top:10px;
+  font-size:15px;
+  color:#444;
+}
   </style>
 	
 </head>
@@ -1072,79 +1168,43 @@ a:hover{
   <p>Ayesha Rellora</p>
 </section>
 
+<section class="dress-code-section">
 
+  <div class="dress-container">
 
-<section class="details-bg reveal">
+    <!-- TOP -->
+    <div class="dress-top">
+      <h2 class="script">Dress Code</h2>
 
-<!-- 🌿 MAIN CARD -->
-<div class="details-overlay">
+      <h3>FOR GUEST:</h3>
+      <p class="subtitle">Modern Filipiniana / Barong</p>
 
-  <!-- 🖼 DEETS IMAGE -->
- <div class="deets-frame">
-  <img src="Deets.png" alt="Wedding Details">
-</div>
-
-  <!-- 💌 GIFT GUIDE -->
-  <div class="details-block">
-    <h3>GIFT GUIDE</h3>
-    <p class="verse">
-      “With all humility and gentleness, with patience,<br>
-      bearing with one another in love.” – Ephesians 4:2
-    </p>
-
-    <p>
-      Your presence is the greatest gift we could ask for.<br>
-      If you feel led to give, a monetary gift would be greatly appreciated<br>
-      as we begin our life together under God’s grace.
-    </p>
-
-    <p><strong>Thank you for your love and prayers.</strong></p>
-  </div>
-
-  <!-- 👥 PLUS ONE -->
-  <div class="details-block">
-    <h3>CAN I BRING SOMEONE WITH ME?</h3>
-    <p>
-      As much as we would love to celebrate with everyone dear to us,
-      our venue allows only a limited number of guests.
-      We humbly ask for your kind understanding in honoring our invitation as it is.
-    </p>
-  </div>
-
-  <!-- 📵 UNPLUGGED -->
-  <div class="details-block">
-    <h3>UNPLUGGED CEREMONY</h3>
-    <p>
-      We kindly invite you to be fully present with us during our ceremony.<br>
-      Please refrain from using phones and cameras until the ceremony has ended.
-    </p>
-  </div>
-
-  <!-- 📍 LOCATIONS -->
-  <div class="details-block">
-    <h3>EVENT LOCATIONS</h3>
-
-    <div class="details-images">
-
-      <div>
-        <p><strong>Ceremony</strong></p>
-        <p>Fairview Park United Methodist Church</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=Fairview+Park+United+Methodist+Church" target="_blank" class="map-btn">
-          View Location
-        </a>
+      <div class="palette">
+        <p>COLOR PALETTE<br><span>STRICTLY NO WEARING WHITE</span></p>
+        <div class="colors">
+          <span class="c1"></span>
+          <span class="c2"></span>
+          <span class="c3"></span>
+          <span class="c4"></span>
+        </div>
       </div>
-
-      <div>
-        <p><strong>Reception</strong></p>
-        <p>Don Jose Heights Clubhouse</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=Don+Jose+Heights+Clubhouse" target="_blank" class="map-btn">
-          View Location
-        </a>
-      </div>
-
     </div>
+
+    <!-- DIVIDER -->
+    <div class="divider"></div>
+
+    <!-- BOTTOM -->
+    <div class="dress-bottom">
+      <h3>FOR PRINCIPAL SPONSORS</h3>
+      <p>Ninong: Barong</p>
+      <p>Ninang: Filipiniana Mauve</p>
+    </div>
+
   </div>
 
+</section>
+
+	
   <!-- 💳 BANK DETAILS -->
   <div class="details-block">
     <h3>GIFT OPTIONS</h3>
