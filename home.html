@@ -422,7 +422,16 @@ section:not(.hero)::before{
       font-size:22px;
       letter-spacing:5px;
       font-family:'Playfair Display',serif;
+	display:inline-block;
+  text-decoration:none;
+  border-radius:40px;
+  transition:.3s;
     }
+
+	  .rsvp-button:hover{
+  transform:translateY(-3px) scale(1.03);
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
 
     .rsvp-note{
       max-width:700px;
@@ -728,6 +737,40 @@ a:hover{
   max-width:700px;
   margin:0 auto;
 }		  
+
+.deets-frame{
+  max-width:900px; /* SAME as entourage */
+  margin:0 auto 50px;
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* overlay for elegance */
+.deets-frame::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.15),
+    rgba(255,255,255,0.05)
+  );
+}
+
+/* image fits perfectly */
+.deets-frame img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+
+/* subtle zoom on hover */
+.deets-frame:hover img{
+  transform:scale(1.03);
+}
   </style>
 	
 </head>
@@ -857,7 +900,11 @@ a:hover{
   <!-- RSVP -->
   <section class="rsvp-card floral-section reveal">
     <img src="ring.png">
-    <div class="rsvp-button">RSVP HERE</div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSesvoWIXdIbND7EFdsYgFhL_7q5SeslSDXHqHRVJBkxOlB6Gw/viewform?usp=sharing&ouid=113705064634220302025" 
+   target="_blank" 
+   class="rsvp-button">
+   RSVP HERE
+</a>
     <div class="rsvp-note">
       This celebration is strictly by invitation only.<br><br>
       Kindly respond on or before May 19, 2026 so we may properly prepare for your presence on June 19, 2026.<br><br>
@@ -995,7 +1042,9 @@ a:hover{
 <div class="details-overlay">
 
   <!-- 🖼 DEETS IMAGE -->
-  <img src="Deets.png" class="deets-image">
+ <div class="deets-frame">
+  <img src="Deets.png" alt="Wedding Details">
+</div>
 
   <!-- 💌 GIFT GUIDE -->
   <div class="details-block">
