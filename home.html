@@ -146,6 +146,7 @@ section:not(.hero)::before{
   height:2px;
   background:var(--green);
   opacity:.3;
+  pointer-events:none;
 }
 
 
@@ -1262,17 +1263,17 @@ a:hover{
   <div class="qr-grid">
     <div class="qr-card">
       <img src="qr.jpg" onclick="openModal(this.src)">
-      <span>GCash</span>
+      <span>BDO</span>
     </div>
 
     <div class="qr-card">
       <img src="qr1.jpg" onclick="openModal(this.src)">
-      <span>Bank</span>
+      <span>GCASH</span>
     </div>
 
     <div class="qr-card">
       <img src="qr2.jpg" onclick="openModal(this.src)">
-      <span>Maya</span>
+      <span>LANDBANK</span>
     </div>
   </div>
 </div>
@@ -1293,16 +1294,6 @@ a:hover{
 
     let images=[];
     let current=0;
-
-    viewBtn.onclick=()=>{
-  expand.classList.add("open"); // always open
-  load("bride");
-
-  expand.scrollIntoView({
-    behavior:"smooth",
-    block:"start"
-  });
-};
 
     function load(type){
       grid.innerHTML="";
@@ -1443,11 +1434,9 @@ viewBtn.onclick = () => {
   expand.classList.add("open");
   load("bride");
 
-  preloadBatch(); // only preload AFTER user clicks
-
   expand.scrollIntoView({
-    behavior:"smooth",
-    block:"start"
+    behavior: "smooth",
+    block: "start"
   });
 };
   
@@ -1459,6 +1448,20 @@ viewBtn.onclick = () => {
 function closeModal(){
   document.getElementById('modal').classList.remove('show');
 }
+
+viewBtn.onclick = () => {
+  expand.classList.add("open");
+  load("bride");
+
+  setTimeout(() => {
+    expand.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }, 200);
+};
+
+	  
   </script>
 <div class="modal" id="modal">
   <div class="modal-content">
