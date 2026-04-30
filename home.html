@@ -588,6 +588,61 @@ html{
     height:90px;
     background-size:cover;
   }
+
+.details-bg{
+  background: url("deets.png") no-repeat center;
+  background-size: cover;
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.details-overlay{
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 50px 30px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.details-block{
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.details-block h3{
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #2c5e1a;
+}
+
+.details-block p{
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.verse{
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.details-images{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.details-images img{
+  width: 160px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
   </style>
 </head>
 
@@ -846,43 +901,57 @@ html{
   <p>Ayesha Rellora</p>
 </section>
 
-<section class="invite-details reveal">
- 	 <div class="script-title">Details</div>
+<section class="details-bg reveal">
 
-  <div class="two-col">
+  <div class="details-overlay">
 
-    <div>
-      <div class="section-title">GIFT GUIDE</div>
-      <p class="sub-text">
-        Your presence is the greatest gift we could ask for.<br>
-        If you feel led to give, a monetary gift would be appreciated.
+    <div class="details-block">
+      <h3>Gift Guide</h3>
+      <p class="verse">
+        “With all humility and gentleness, with patience, bearing with one another in love.” – Ephesians 4:2
       </p>
+      <p>
+        Your presence is the greatest gift we could ask for. If you feel led to give, a monetary gift would be greatly appreciated as we begin our life together under God’s grace.
+      </p>
+      <p><strong>Thank you for your love and prayers.</strong></p>
+    </div>
 
-      <div class="section-title">UNPLUGGED</div>
-      <p class="sub-text">
-        Please refrain from using phones during the ceremony.
+    <div class="details-block">
+      <h3>Can I bring someone with me?</h3>
+      <p>
+        As much as we would love to celebrate with everyone dear to us, our venue allows only a limited number of guests. We humbly ask for your kind understanding in honoring our invitation as it is.
       </p>
     </div>
 
-    <div>
-      <div class="section-title">DRESS CODE</div>
-      <p class="sub-text">
-        Guests: Modern Filipiniana / Barong<br><br>
-        Sponsors:<br>
-        Ninong: Barong<br>
-        Ninang: Filipiniana (Mauve)
+    <div class="details-block">
+      <h3>Unplugged</h3>
+      <p>
+        We kindly invite you to be fully present with us during our ceremony.
+        Please refrain from using phones and cameras until the ceremony has ended.
       </p>
+    </div>
 
-      <div class="section-title">NOTE</div>
-      <p class="sub-text">
-        Strictly no wearing of white.
-      </p>
+    <!-- QR SECTION -->
+    <div class="details-block">
+      <h3>QR Code</h3>
+      <div class="details-images">
+        <img src="C.png" alt="Ceremony QR">
+        <img src="R.png" alt="Reception QR">
+      </div>
+    </div>
+
+    <!-- BANK DETAILS -->
+    <div class="details-block">
+      <h3>Bank Details</h3>
+      <div class="details-images">
+        <img src="B.png" alt="Bank Details">
+      </div>
     </div>
 
   </div>
 
 </section>
-
+	
   <script>
     const viewBtn=document.getElementById("viewBtn");
     const expand=document.getElementById("expandBox");
