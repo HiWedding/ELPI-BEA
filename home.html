@@ -643,6 +643,46 @@ html{
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+.deets-image{
+  width:100%;
+  max-width:900px;
+  margin:40px auto;
+  display:block;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.15);
+}
+
+.extra-details{
+  max-width:800px;
+  margin:40px auto;
+  text-align:center;
+}
+
+.extra-details p{
+  margin-bottom:20px;
+  line-height:1.8;
+  color:#444;
+}
+
+.qr-section{
+  margin-top:60px;
+  text-align:center;
+}
+
+.qr-grid{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.qr-grid img{
+  width:180px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+		  
   </style>
 </head>
 
@@ -903,53 +943,76 @@ html{
 
 <section class="details-bg reveal">
 
-  <div class="details-overlay">
+<img src="deets.png" style="
+  width:100%;
+  max-width:900px;
+  margin:50px auto;
+  display:block;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.15);
+">
 
-    <div class="details-block">
-      <h3>Gift Guide</h3>
-      <p class="verse">
-        “With all humility and gentleness, with patience, bearing with one another in love.” – Ephesians 4:2
-      </p>
-      <p>
-        Your presence is the greatest gift we could ask for. If you feel led to give, a monetary gift would be greatly appreciated as we begin our life together under God’s grace.
-      </p>
-      <p><strong>Thank you for your love and prayers.</strong></p>
+<!-- 💌 EXTRA DETAILS -->
+<div style="max-width:800px;margin:40px auto;text-align:center;">
+
+  <div class="section-title">GIFT GUIDE</div>
+  <p style="margin-bottom:15px;">
+    “With all humility and gentleness, with patience,<br>
+    bearing with one another in love.” – Ephesians 4:2
+  </p>
+
+  <p>
+    Your presence is the greatest gift we could ask for.
+    If you feel led to give, a monetary gift would be greatly appreciated
+    as we begin our life together under God’s grace.
+    <br><br>
+    Thank you for your love and prayers.
+  </p>
+
+  <div class="section-title" style="margin-top:40px;">
+    CAN I BRING SOMEONE WITH ME?
+  </div>
+  <p>
+    As much as we would love to celebrate with everyone dear to us,
+    our venue allows only a limited number of guests.
+    We humbly ask for your kind understanding in honoring our invitation as it is.
+  </p>
+
+  <div class="section-title" style="margin-top:40px;">UNPLUGGED</div>
+  <p>
+    We kindly invite you to be fully present with us during our ceremony.
+    Please refrain from using phones and cameras until the ceremony has ended.
+  </p>
+
+</div>
+
+<!-- 📍 QR + BANK -->
+<div style="text-align:center;margin-top:60px;">
+
+  <div class="section-title">EVENT LOCATIONS</div>
+
+  <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:20px;">
+    <div>
+      <img src="C.png" style="width:180px;border-radius:12px;">
+      <p>Ceremony</p>
     </div>
 
-    <div class="details-block">
-      <h3>Can I bring someone with me?</h3>
-      <p>
-        As much as we would love to celebrate with everyone dear to us, our venue allows only a limited number of guests. We humbly ask for your kind understanding in honoring our invitation as it is.
-      </p>
+    <div>
+      <img src="R.png" style="width:180px;border-radius:12px;">
+      <p>Reception</p>
     </div>
-
-    <div class="details-block">
-      <h3>Unplugged</h3>
-      <p>
-        We kindly invite you to be fully present with us during our ceremony.
-        Please refrain from using phones and cameras until the ceremony has ended.
-      </p>
-    </div>
-
-    <!-- QR SECTION -->
-    <div class="details-block">
-      <h3>QR Code</h3>
-      <div class="details-images">
-        <img src="C.png" alt="Ceremony QR">
-        <img src="R.png" alt="Reception QR">
-      </div>
-    </div>
-
-    <!-- BANK DETAILS -->
-    <div class="details-block">
-      <h3>Bank Details</h3>
-      <div class="details-images">
-        <img src="B.png" alt="Bank Details">
-      </div>
-    </div>
-
   </div>
 
+  <div class="section-title" style="margin-top:40px;">GIFT OPTIONS</div>
+
+  <div style="display:flex;justify-content:center;margin-top:20px;">
+    <div>
+      <img src="B.png" style="width:180px;border-radius:12px;">
+      <p>Bank Details</p>
+    </div>
+  </div>
+
+</div>
 </section>
 	
   <script>
