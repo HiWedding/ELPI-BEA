@@ -562,6 +562,7 @@ html{
   border-radius:20px;
   box-shadow:0 20px 60px rgba(0,0,0,0.08);
   overflow:hidden;
+		  border:1px solid rgba(44,94,26,0.15);
 }
 
 /* TOP BORDER IMAGE */
@@ -572,7 +573,7 @@ html{
   left:0;
   width:100%;
   height:140px;
-
+ mask-image:linear-gradient(to bottom, black 70%, transparent);
   background:url("hihi.webp") no-repeat center top;
   background-size:cover;
 
@@ -588,7 +589,7 @@ html{
   left:0;
   width:100%;
   height:140px;
-
+ mask-image:linear-gradient(to bottom, black 70%, transparent);
   background:url("hihi1.webp") no-repeat center bottom;
   background-size:cover;
 
@@ -601,6 +602,13 @@ html{
   position:relative;
   z-index:1;
 }
+
+	  @media(max-width:768px){
+  .frame-section::before,
+  .frame-section::after{
+    height:90px;
+    background-size:cover;
+  }
   </style>
 </head>
 
@@ -788,7 +796,7 @@ html{
 </section>
 
 
-<section class="invite-details reveal">
+<section class="invite-details frame-section reveal">
   <div class="script-title">Secondary Sponsors</div>
   <div class="sub-text">To assist us in our needs</div>
 
