@@ -859,18 +859,94 @@ a:hover{
 }
 
 .modal img{
-  max-width:90%;
-  max-height:90%;
+ max-width:90vw;
+  max-height:85vh;
   border-radius:15px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+.modal-content{
+  position:relative;
+  animation:zoomIn .3s ease;
 }
 
 .close{
   position:absolute;
-  top:20px;
-  right:30px;
-  font-size:40px;
-  color:#fff;
+  top:-15px;
+  right:-15px;
+  width:40px;
+  height:40px;
+  background:#fff;
+  color:#000;
+  font-size:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
   cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  transition:.3s;
+}
+
+.close:hover{
+  transform:scale(1.1);
+  background:#f2f2f2;
+}
+
+@keyframes zoomIn{
+  from{transform:scale(0.8); opacity:0;}
+  to{transform:scale(1); opacity:1;}
+}
+
+.qr-section{
+  margin-top:60px;
+  text-align:center;
+}
+
+.qr-title{
+  font-family:'Playfair Display',serif;
+  letter-spacing:2px;
+  color:#2c5e1a;
+}
+
+.qr-sub{
+  font-size:14px;
+  color:#777;
+  margin-bottom:25px;
+}
+
+.qr-grid{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.qr-card{
+  background:#fff;
+  padding:15px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transition:.3s;
+  text-align:center;
+}
+
+.qr-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.qr-card img{
+  width:120px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.qr-card span{
+  display:block;
+  margin-top:10px;
+  font-size:13px;
+  color:#444;
 }
 
   </style>
@@ -1180,16 +1256,26 @@ a:hover{
   <h3>GIFT OPTIONS</h3>
 
   <div class="qr-section">
-    <div class="qr-grid">
+  <h3 class="qr-title">Gift Options</h3>
+  <p class="qr-sub">Scan any QR to send your gift</p>
+
+  <div class="qr-grid">
+    <div class="qr-card">
       <img src="qr.jpg" onclick="openModal(this.src)">
-  <img src="qr1.jpg" onclick="openModal(this.src)">
-  <img src="qr2.jpg" onclick="openModal(this.src)">
-</div>
-    <p style="margin-top:15px;">Scan any QR code for gift options</p>
+      <span>GCash</span>
+    </div>
+
+    <div class="qr-card">
+      <img src="qr1.jpg" onclick="openModal(this.src)">
+      <span>Bank</span>
+    </div>
+
+    <div class="qr-card">
+      <img src="qr2.jpg" onclick="openModal(this.src)">
+      <span>Maya</span>
+    </div>
   </div>
-
 </div>
-
 </section>
 	
   <script>
@@ -1375,8 +1461,10 @@ function closeModal(){
 }
   </script>
 <div class="modal" id="modal">
-  <span class="close" onclick="closeModal()">×</span>
-  <img id="modalImg">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <img id="modalImg">
+  </div>
 </div>
 </body>
 </html>
