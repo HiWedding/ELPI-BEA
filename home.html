@@ -552,6 +552,55 @@ html{
   position:relative;
   z-index:1;
 }
+
+	  .frame-section{
+  position:relative;
+  background:#fff;
+  margin:80px auto;
+  max-width:1100px;
+  padding:120px 40px;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+  overflow:hidden;
+}
+
+/* TOP BORDER IMAGE */
+.frame-section::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:140px;
+
+  background:url("hihi.webp") no-repeat center top;
+  background-size:cover;
+
+  opacity:.9;
+  pointer-events:none;
+}
+
+/* BOTTOM BORDER IMAGE */
+.frame-section::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:140px;
+
+  background:url("hihi1.webp") no-repeat center bottom;
+  background-size:cover;
+
+  opacity:.9;
+  pointer-events:none;
+}
+
+/* PUSH CONTENT AWAY FROM BORDER */
+.frame-section > *{
+  position:relative;
+  z-index:1;
+}
   </style>
 </head>
 
