@@ -37,6 +37,7 @@
       z-index:9999;
       animation:fall linear infinite;
       filter:blur(.3px);
+	  
     }
 
     @keyframes fall{
@@ -57,6 +58,7 @@
       z-index:9999;
       transition:all 1s cubic-bezier(.2,.8,.2,1);
       animation:floatTitle 4s ease-in-out infinite;
+	  pointer-events:none;
     }
 
     @keyframes floatTitle{
@@ -126,6 +128,7 @@
       position:absolute;
       inset:0;
       background:rgba(0,0,0,0.35);
+	  pointer-events:none;
     }
 
     section{
@@ -137,6 +140,7 @@ section{
 }
 
 section:not(.hero)::before{
+  pointer-events:none;
   content:"";
   position:absolute;
   top:0;
@@ -263,6 +267,8 @@ section:not(.hero)::before{
       cursor:pointer;
       font-family:'Playfair Display',serif;
       transition:.3s;
+		position:relative;
+  z-index:5;
     }
 
     .view-btn:hover{
@@ -276,6 +282,8 @@ section:not(.hero)::before{
   overflow:hidden;
   transform:translateY(60px);
   transition:all 1s cubic-bezier(.2,.8,.2,1);
+  position:relative;
+  z-index:2;
 }
 
 .gallery-expand.open{
@@ -314,6 +322,9 @@ section:not(.hero)::before{
       cursor:pointer;
       font-family:'Playfair Display',serif;
       transition:.3s;
+	  position:relative;
+      z-index:5;
+		
     }
 
     .mode-btn.active{
@@ -361,6 +372,7 @@ section:not(.hero)::before{
       justify-content:center;
       z-index:99999;
       backdrop-filter:blur(10px);
+		pointer-events:auto;
     }
 
     .lightbox.show{
@@ -427,6 +439,8 @@ section:not(.hero)::before{
   text-decoration:none;
   border-radius:40px;
   transition:.3s;
+ position:relative;
+  z-index:5;
     }
 
 	  .rsvp-button:hover{
@@ -853,6 +867,7 @@ a:hover{
   align-items:center;
   justify-content:center;
   z-index:9999;
+  pointer-events:auto;
 }
 
 .modal.show{
