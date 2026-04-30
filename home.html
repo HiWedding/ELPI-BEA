@@ -886,23 +886,6 @@ a:hover{
   animation:zoomIn .3s ease;
 }
 
-.close{
-  position:absolute;
-  top:-15px;
-  right:-15px;
-  width:40px;
-  height:40px;
-  background:#fff;
-  color:#000;
-  font-size:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  cursor:pointer;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
-  transition:.3s;
-}
 
 .close:hover{
   transform:scale(1.1);
@@ -1478,9 +1461,8 @@ viewBtn.onclick = () => {
 
 	  
   </script>
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">×</span>
+<div class="modal" id="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
     <img id="modalImg">
   </div>
 </div>
