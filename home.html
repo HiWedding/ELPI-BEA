@@ -682,8 +682,14 @@ html{
   border-radius:12px;
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
+
+a:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(44,94,26,.3);
+}
 		  
   </style>
+	
 </head>
 
 <body>
@@ -991,23 +997,65 @@ html{
 
   <div class="section-title">EVENT LOCATIONS</div>
 
-  <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:20px;">
-    <div>
-      <img src="C.png" style="width:180px;border-radius:12px;">
-      <p>Ceremony</p>
+ <div style="text-align:center;margin-top:60px;">
+
+  <div class="section-title">EVENT LOCATIONS</div>
+
+  <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:25px;">
+
+    <!-- CEREMONY -->
+    <div style="max-width:260px;">
+      <h3 style="margin-bottom:10px;">Ceremony</h3>
+      <p style="margin-bottom:15px;">Fairview Park United Methodist Church</p>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=Fairview+Park+United+Methodist+Church"
+         target="_blank"
+         style="
+          display:inline-block;
+          padding:12px 24px;
+          border-radius:30px;
+          background:#2c5e1a;
+          color:#fff;
+          text-decoration:none;
+          font-size:14px;
+          letter-spacing:1px;
+          transition:.3s;
+         ">
+         View Location
+      </a>
     </div>
 
-    <div>
-      <img src="R.png" style="width:180px;border-radius:12px;">
-      <p>Reception</p>
+    <!-- RECEPTION -->
+    <div style="max-width:260px;">
+      <h3 style="margin-bottom:10px;">Reception</h3>
+      <p style="margin-bottom:15px;">Don Jose Heights Clubhouse</p>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=Don+Jose+Heights+Clubhouse"
+         target="_blank"
+         style="
+          display:inline-block;
+          padding:12px 24px;
+          border-radius:30px;
+          background:#2c5e1a;
+          color:#fff;
+          text-decoration:none;
+          font-size:14px;
+          letter-spacing:1px;
+          transition:.3s;
+         ">
+         View Location
+      </a>
     </div>
+
   </div>
-
-  <div class="section-title" style="margin-top:40px;">GIFT OPTIONS</div>
+</div>  
+	
+	<div class="section-title" style="margin-top:40px;">GIFT OPTIONS</div>
 
   <div style="display:flex;justify-content:center;margin-top:20px;">
     <div>
       <img src="B.png" style="width:180px;border-radius:12px;">
+		<img src="B.png" onclick="openBank(this.src)" style="cursor:pointer;">
       <p>Bank Details</p>
     </div>
   </div>
