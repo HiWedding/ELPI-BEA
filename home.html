@@ -1459,15 +1459,23 @@ viewBtn.onclick = () => {
   }, 200);
 };
 
+function openModal(src){
+  document.getElementById('modal').classList.add('show');
+  document.getElementById('modalImg').src = src;
+}
+
+function closeModal(){
+  document.getElementById('modal').classList.remove('show');
+}
 	  
   </script>
 
 
-	  <div class="modal" id="modal" onclick="closeModal()">
+	 <div class="modal" id="modal" onclick="closeModal()">
   <div class="modal-content">
-    <img id="modalImg" onclick="event.stopPropagation()">
- 
+    <img id="modalImg">
   </div>
 </div>
+  
 </body>
 </html>
