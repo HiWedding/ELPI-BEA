@@ -947,120 +947,90 @@ a:hover{
   <p>Ayesha Rellora</p>
 </section>
 
+
+
 <section class="details-bg reveal">
 
-<img src="deets.png" style="
-  width:100%;
-  max-width:900px;
-  margin:50px auto;
-  display:block;
-  border-radius:20px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.15);
-">
+<!-- 🌿 MAIN CARD -->
+<div class="details-overlay">
 
-<!-- 💌 EXTRA DETAILS -->
-<div style="max-width:800px;margin:40px auto;text-align:center;">
+  <!-- 🖼 DEETS IMAGE -->
+  <img src="Deets.png" class="deets-image">
 
-  <div class="section-title">GIFT GUIDE</div>
-  <p style="margin-bottom:15px;">
-    “With all humility and gentleness, with patience,<br>
-    bearing with one another in love.” – Ephesians 4:2
-  </p>
+  <!-- 💌 GIFT GUIDE -->
+  <div class="details-block">
+    <h3>GIFT GUIDE</h3>
+    <p class="verse">
+      “With all humility and gentleness, with patience,<br>
+      bearing with one another in love.” – Ephesians 4:2
+    </p>
 
-  <p>
-    Your presence is the greatest gift we could ask for.
-    If you feel led to give, a monetary gift would be greatly appreciated
-    as we begin our life together under God’s grace.
-    <br><br>
-    Thank you for your love and prayers.
-  </p>
+    <p>
+      Your presence is the greatest gift we could ask for.<br>
+      If you feel led to give, a monetary gift would be greatly appreciated<br>
+      as we begin our life together under God’s grace.
+    </p>
 
-  <div class="section-title" style="margin-top:40px;">
-    CAN I BRING SOMEONE WITH ME?
+    <p><strong>Thank you for your love and prayers.</strong></p>
   </div>
-  <p>
-    As much as we would love to celebrate with everyone dear to us,
-    our venue allows only a limited number of guests.
-    We humbly ask for your kind understanding in honoring our invitation as it is.
-  </p>
 
-  <div class="section-title" style="margin-top:40px;">UNPLUGGED</div>
-  <p>
-    We kindly invite you to be fully present with us during our ceremony.
-    Please refrain from using phones and cameras until the ceremony has ended.
-  </p>
-
-</div>
-
-<!-- 📍 QR + BANK -->
-<div style="text-align:center;margin-top:60px;">
-
-  <div class="section-title">EVENT LOCATIONS</div>
-
- <div style="text-align:center;margin-top:60px;">
-
-  <div class="section-title">EVENT LOCATIONS</div>
-
-  <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:25px;">
-
-    <!-- CEREMONY -->
-    <div style="max-width:260px;">
-      <h3 style="margin-bottom:10px;">Ceremony</h3>
-      <p style="margin-bottom:15px;">Fairview Park United Methodist Church</p>
-
-      <a href="https://www.google.com/maps/search/?api=1&query=Fairview+Park+United+Methodist+Church"
-         target="_blank"
-         style="
-          display:inline-block;
-          padding:12px 24px;
-          border-radius:30px;
-          background:#2c5e1a;
-          color:#fff;
-          text-decoration:none;
-          font-size:14px;
-          letter-spacing:1px;
-          transition:.3s;
-         ">
-         View Location
-      </a>
-    </div>
-
-    <!-- RECEPTION -->
-    <div style="max-width:260px;">
-      <h3 style="margin-bottom:10px;">Reception</h3>
-      <p style="margin-bottom:15px;">Don Jose Heights Clubhouse</p>
-
-      <a href="https://www.google.com/maps/search/?api=1&query=Don+Jose+Heights+Clubhouse"
-         target="_blank"
-         style="
-          display:inline-block;
-          padding:12px 24px;
-          border-radius:30px;
-          background:#2c5e1a;
-          color:#fff;
-          text-decoration:none;
-          font-size:14px;
-          letter-spacing:1px;
-          transition:.3s;
-         ">
-         View Location
-      </a>
-    </div>
-
+  <!-- 👥 PLUS ONE -->
+  <div class="details-block">
+    <h3>CAN I BRING SOMEONE WITH ME?</h3>
+    <p>
+      As much as we would love to celebrate with everyone dear to us,
+      our venue allows only a limited number of guests.
+      We humbly ask for your kind understanding in honoring our invitation as it is.
+    </p>
   </div>
-</div>  
-	
-	<div class="section-title" style="margin-top:40px;">GIFT OPTIONS</div>
 
-  <div style="display:flex;justify-content:center;margin-top:20px;">
-    <div>
-      <img src="B.png" style="width:180px;border-radius:12px;">
-		<img src="B.png" onclick="openBank(this.src)" style="cursor:pointer;">
-      <p>Bank Details</p>
+  <!-- 📵 UNPLUGGED -->
+  <div class="details-block">
+    <h3>UNPLUGGED CEREMONY</h3>
+    <p>
+      We kindly invite you to be fully present with us during our ceremony.<br>
+      Please refrain from using phones and cameras until the ceremony has ended.
+    </p>
+  </div>
+
+  <!-- 📍 LOCATIONS -->
+  <div class="details-block">
+    <h3>EVENT LOCATIONS</h3>
+
+    <div class="details-images">
+
+      <div>
+        <p><strong>Ceremony</strong></p>
+        <p>Fairview Park United Methodist Church</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Fairview+Park+United+Methodist+Church" target="_blank" class="map-btn">
+          View Location
+        </a>
+      </div>
+
+      <div>
+        <p><strong>Reception</strong></p>
+        <p>Don Jose Heights Clubhouse</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Don+Jose+Heights+Clubhouse" target="_blank" class="map-btn">
+          View Location
+        </a>
+      </div>
+
     </div>
+  </div>
+
+  <!-- 💳 BANK DETAILS -->
+  <div class="details-block">
+    <h3>GIFT OPTIONS</h3>
+
+    <div class="details-images">
+      <img src="B.png" onclick="openBank(this.src)" style="cursor:pointer;">
+    </div>
+
+    <p style="margin-top:10px;">Tap image to view full details</p>
   </div>
 
 </div>
+
 </section>
 	
   <script>
