@@ -955,6 +955,35 @@ a:hover{
   color:#444;
 }
 
+.gift-section{
+  padding:120px 20px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(200,220,200,0.25), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(220,240,230,0.25), transparent 60%),
+    #f9f9f7;
+}
+
+/* cards for elegance */
+.gift-card{
+  max-width:700px;
+  margin:0 auto 40px;
+  background:#fff;
+  padding:40px 30px;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* gift options container */
+.gift-options{
+  margin-top:50px;
+  padding:40px 20px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(10px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+	  
   </style>
 	
 </head>
@@ -1264,54 +1293,59 @@ a:hover{
   <!-- 💳 BANK DETAILS -->
 <div class="details-block">
 
-<div class="script-title">Gift Guide</div>
+<section class="gift-section floral-section reveal">
 
-  <p class="verse">
-    “With all humility and gentleness, with patience, bearing with one another in love.” – Ephesians 4:2
-  </p>
+  <!-- UNPLUGGED FIRST -->
+  <div class="gift-card">
+    <div class="script-title">Unplugged</div>
 
-  <p>
-    Your presence is the greatest gift we could ask for. If you feel led to give, a monetary gift would be greatly appreciated as we begin our life together under God’s grace.
-  </p>
+    <p>
+      We kindly invite you to be fully present with us during our ceremony.
+    </p>
 
-  <p>
-    Thank you for your love and prayers.
-  </p>
+    <p>
+      Please refrain from using phones and cameras until the ceremony has ended.
+    </p>
+  </div>
 
+  <!-- DIVIDER -->
   <div class="divider"></div>
 
-  <div class="script-title">Unplugged</div>
+  <!-- GIFT GUIDE -->
+  <div class="gift-card">
+    <div class="script-title">Gift Guide</div>
 
-  <p>
-    We kindly invite you to be fully present with us during our ceremony.
-  </p>
+    <p class="verse">
+      “With all humility and gentleness, with patience, bearing with one another in love.” – Ephesians 4:2
+    </p>
 
-  <p>
-    Please refrain from using phones and cameras until the ceremony has ended.
-  </p>
+    <p>
+      Your presence is the greatest gift we could ask for. If you feel led to give, a monetary gift would be greatly appreciated as we begin our life together under God’s grace.
+    </p>
 
-</section>
-	<br><br><hr>
-	
-  <h3>GIFT OPTIONS</h3>
-
-  <div class="qr-section">
-
-  <p class="qr-sub">Scan any QR to send your gift</p>
-
-  <div class="qr-grid">
-    <div class="qr-card">
-      <img src="qr.jpg" onclick="openModal(this.src)">
-      <span>BDO</span>
-    </div>
-
-    <div class="qr-card">
-      <img src="qr1.jpg" onclick="openModal(this.src)">
-      <span>GCASH</span>
-    </div>
-
+    <p>
+      Thank you for your love and prayers.
+    </p>
   </div>
-</div>
+
+  <!-- GIFT OPTIONS (NOT PLAIN ANYMORE) -->
+  <div class="gift-options">
+    <h3 class="section-title">Gift Options</h3>
+    <p class="sub-text">Scan any QR to send your gift</p>
+
+    <div class="qr-grid">
+      <div class="qr-card" onclick="openModal('qr.jpg')">
+        <img src="qr.jpg">
+        <span>BDO</span>
+      </div>
+
+      <div class="qr-card" onclick="openModal('qr1.jpg')">
+        <img src="qr1.jpg">
+        <span>GCASH</span>
+      </div>
+    </div>
+  </div>
+
 </section>
 	
   <script>
@@ -1496,10 +1530,6 @@ viewBtn.onclick = () => {
   }, 200);
 };
 
-function openModal(src){
-  document.getElementById('modal').classList.add('show');
-  document.getElementById('modalImg').src = src;
-}
 
 function closeModal(){
   document.getElementById('modal').classList.remove('show');
