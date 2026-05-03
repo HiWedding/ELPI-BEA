@@ -983,6 +983,81 @@ a:hover{
   backdrop-filter:blur(10px);
   box-shadow:0 15px 40px rgba(0,0,0,0.08);
 }
+
+.venue-section{
+  margin-top:60px;
+  display:flex;
+  justify-content:center;
+}
+
+.venue-container{
+  max-width:750px;
+  width:100%;
+  background:#fff;
+  border-radius:25px;
+  padding:50px 25px;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+  animation:fadeUp 1s ease both;
+}
+
+.venue-title{
+  font-family:'Great Vibes',cursive;
+  font-size:44px;
+  color:#2c5e1a;
+  margin-bottom:25px;
+}
+
+.venue-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:center;
+}
+
+.venue-card{
+  flex:1 1 280px;
+  background:#f9f9f7;
+  border-radius:20px;
+  padding:25px 20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:.3s;
+}
+
+.venue-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+.venue-card h3{
+  font-family:'Playfair Display',serif;
+  letter-spacing:2px;
+  color:#2c5e1a;
+  margin-bottom:10px;
+}
+
+.venue-card p{
+  font-size:14px;
+  color:#555;
+  margin-bottom:15px;
+}
+
+.map-link{
+  display:inline-block;
+  padding:10px 20px;
+  border-radius:30px;
+  background:#2c5e1a;
+  color:#fff;
+  font-size:13px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.map-link:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(44,94,26,.3);
+}
+
 	  
   </style>
 	
@@ -1273,6 +1348,28 @@ a:hover{
         </div>
       </div>
     </div>
+
+	    class="map-link">
+           View Ceremony Location
+        </a>
+      </div>
+
+      <!-- RECEPTION -->
+      <div class="venue-card">
+        <h3>RECEPTION</h3>
+        <p>Don Jose Heights Clubhouse</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Don+Jose+Heights+Clubhouse"
+           target="_blank"
+           class="map-link">
+           View Reception Location
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
     <!-- DIVIDER -->
     <div class="divider"></div>
